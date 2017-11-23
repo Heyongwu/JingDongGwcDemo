@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">JingDongGwcDemo</string>
+    <string name="movie">首页</string>
+    <string name="tv">分类</string>
+    <string name="anime">购物车</string>
+    <string name="variety">个人最新</string>
+
+
+</resources>
