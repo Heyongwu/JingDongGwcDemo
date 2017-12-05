@@ -9,6 +9,7 @@ public class Api {
     public static final String LOGIN = HOST+"/user/login";
     public static final String REGISTER = HOST+"/user/reg";
     public static final String PRODUCT = HOST+"/product/getCatagory";
+    public static final String PRODUCTCATAGORY = HOST+"/product/getProductCatagory";
 
 
 }

@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import java.io.IOException;
 
 import mvpframework.bwie.com.jingdonggwcdemo.JavaBean.BeasModel;
+import mvpframework.bwie.com.jingdonggwcdemo.JavaBean.ErJiBean;
 import mvpframework.bwie.com.jingdonggwcdemo.JavaBean.JdBean;
 import mvpframework.bwie.com.jingdonggwcdemo.net.Api;
 import mvpframework.bwie.com.jingdonggwcdemo.net.HttpUtils;
@@ -45,4 +46,33 @@ public class TwoModel extends BeasModel implements ITwoModel {
             }
         });
     }
+
+    @Override
+    public void getErjiBean(final OnNetListener<ErJiBean> onNetListener) {
+        HttpUtils.getHttpUtils().doGet(Api.PRODUCTCATAGORY, new Callback() {
+            @Override
+            public void onFailure(Call call, final IOException e) {
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        onNetListener.OnFailour(e);
+                    }
+                });
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                String string = response.body().string();
+                final ErJiBean productCatagoryBean = new Gson().fromJson(string, ErJiBean.class);
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        onNetListener.OnSuccess(productCatagoryBean);
+                    }
+                });
+            }
+        });
+    }
+
+
 }

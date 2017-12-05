@@ -2,6 +2,7 @@ package mvpframework.bwie.com.jingdonggwcdemo.view2;
 
 import java.util.List;
 
+import mvpframework.bwie.com.jingdonggwcdemo.JavaBean.ErJiBean;
 import mvpframework.bwie.com.jingdonggwcdemo.JavaBean.JdBean;
 
 /**
@@ -10,7 +11,5 @@ import mvpframework.bwie.com.jingdonggwcdemo.JavaBean.JdBean;
 
 public interface ITwoFragment {
     void showData(List<JdBean.DataBean> list);
-
-
-
+    void showErji(List<ErJiBean.DataBean> groupList);
 }

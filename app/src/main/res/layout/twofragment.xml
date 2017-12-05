@@ -8,9 +8,26 @@
         android:id="@+id/rlv_small"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-    <android.support.v7.widget.RecyclerView
+    <ScrollView
         android:layout_weight="2"
-        android:id="@+id/rlv_big"
+        android:fillViewport="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.youth.banner.Banner
+                android:id="@+id/item_you_banner"
+                android:layout_weight="8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <ExpandableListView
+                android:id="@+id/elv"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>

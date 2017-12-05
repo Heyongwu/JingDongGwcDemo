@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll"
+    android:gravity="center"
+    android:orientation="vertical">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/itemyou_iv_sim_xiao"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        fresco:placeholderImage="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/item_you_tv_xiao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
