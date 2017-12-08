@@ -56,8 +56,15 @@ public class JdBean {
         private String icon;
         private int ishome;
         private String name;
+        private boolean checked;
 
-        
+        public boolean isChecked() {
+            return checked;
+        }
+
+        public void setChecked(boolean checked) {
+            this.checked = checked;
+        }
 
         public int getCid() {
             return cid;

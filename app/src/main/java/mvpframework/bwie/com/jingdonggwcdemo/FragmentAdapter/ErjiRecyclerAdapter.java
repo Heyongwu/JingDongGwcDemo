@@ -22,11 +22,13 @@ import mvpframework.bwie.com.jingdonggwcdemo.R;
 
 class ErjiRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     private List<ErJiBean.DataBean.ListBean> listBean;
+    private List<ErJiBean.DataBean> list2;
     private Context context;
 
-    public ErjiRecyclerAdapter(List<ErJiBean.DataBean.ListBean> list, Context context) {
-        this.listBean = list;
+    public ErjiRecyclerAdapter(List<ErJiBean.DataBean.ListBean> listBean, Context context) {
+        this.listBean = listBean;
         this.context = context;
+
     }
     private OnItemClickListener onItemClickListener;
     public interface OnItemClickListener {

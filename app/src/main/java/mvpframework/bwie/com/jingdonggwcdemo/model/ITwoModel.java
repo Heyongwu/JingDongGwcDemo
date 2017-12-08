@@ -10,5 +10,7 @@ import mvpframework.bwie.com.jingdonggwcdemo.net.OnNetListener;
 
 public interface ITwoModel {
     public void getJdbean(OnNetListener<JdBean> onNetListener);
-    public void getErjiBean(OnNetListener<ErJiBean> onNetListener);
+    public void getErjiBean(String cid,OnNetListener<ErJiBean> onNetListener);
+
+
 }

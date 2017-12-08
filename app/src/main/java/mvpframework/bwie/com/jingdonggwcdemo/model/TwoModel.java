@@ -48,7 +48,7 @@ public class TwoModel extends BeasModel implements ITwoModel {
     }
 
     @Override
-    public void getErjiBean(final OnNetListener<ErJiBean> onNetListener) {
+    public void getErjiBean(String cid, final OnNetListener<ErJiBean> onNetListener) {
         HttpUtils.getHttpUtils().doGet(Api.PRODUCTCATAGORY, new Callback() {
             @Override
             public void onFailure(Call call, final IOException e) {
@@ -73,6 +73,9 @@ public class TwoModel extends BeasModel implements ITwoModel {
             }
         });
     }
+
+
+
 
 
 }

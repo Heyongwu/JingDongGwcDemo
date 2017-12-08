@@ -12,4 +12,5 @@ import mvpframework.bwie.com.jingdonggwcdemo.JavaBean.JdBean;
 public interface ITwoFragment {
     void showData(List<JdBean.DataBean> list);
     void showErji(List<ErJiBean.DataBean> groupList);
+
 }
